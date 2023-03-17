@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+"""practice in daily but will delete work
+before end of the day
+"""
+
+guess = int(input("guess what number i am thinking of: "))
+
+if guess == 81:
+    print('how did you know?!')
+elif guess > 81:
+    print('too high, try again')
+elif guess < 81:
+    print('too low, try again')
+
+
+print('the script is working')
