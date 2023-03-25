@@ -58,3 +58,29 @@ else:
    print ("Discount",discount)
     
 print ("Net payable:",amount-discount)
+
+
+
+one = "player 1 wins"
+two = "player 2 wins"
+options = "rock, paper, or scissors?: "
+player1 = input(options)
+player2 = input(options)
+
+
+if player1 == player2:
+    print('its a tie')
+elif player1 == 'rock' and player2 == 'paper':
+    print(one)
+elif player1 == 'rock' and player2 == 'scissors':
+    print(one)
+elif player1 == 'paper' and player2 == 'rock':
+    print(two)
+elif player1 == 'paper' and player2 == 'scissors':
+    print(two)
+elif player1 == 'scissors' and player2 == 'rock':
+    print(two)
+else:
+    print('something went wrong')
+
+

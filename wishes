@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+
+"""make script that prints if number entered is even or odd
+"""
+user = int(input("Enter a number: "))
+
+if (user % 2) == 0:
+    print(str(user) + " is even")
+else:
+    print(str(user) + " is odd")

@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+
+""" allows to run commands, checking if service httpd is running and
+setting check to subprocess.call() module with the command and options and 
+var in a list [] attached to it, if the output of check is 0 then is running
+if not then not running
+"""
+
+import subprocess
+
+svc = "httpd"
+
+check = subprocess.call(["ps","-C", svc])
+
+if check == 0:
+    print("the service is running")
+else:
+    print("service in not running")
+
+"""same script but for the else if not started it will start the 
+process, again the subprocess.call is written as a list and each
+command is written seperatly and will output the process started
+"""
+
+check = subprocess.call(["ps","-C", svc])
+
+if check == 0:
+    print("the service is running")
+else:
+    print("service is NOT running")
+    print("starting tho...")
+    subprocess.call(["sudo", "systemctl", "start", "httpd"])
+    subprocess.call(["ps", "-C", svc])
+
+"""again same script but is more efficient since i am
+not repeating the commands for the subprocess.call
+"""
+
+checks = ["ps", "-C", svc]
+
+check = subprocess.call(checks)
+
+if check == 0:
+    print("the service is running")
+else:
+    print("service is NOT running")
+    print("starting tho...")
+    subprocess.call(["sudo", "systemctl", "start", "httpd"])
+    subprocess.call(checks)
+
+
+
