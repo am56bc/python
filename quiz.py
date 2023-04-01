@@ -3,6 +3,7 @@
 import time
 
 score = 0
+
 def sleep():
     pause = time.sleep(2)
     print('your current score is ' + str(score))
@@ -16,7 +17,7 @@ if playing.lower() != "yes":
 print("Ok! Let's play!")
 
 answer = input("What is my MN/KC nickname? ")
-if answer.lower == "AP":
+if answer.lower() == "ap":
     print('Correct')
     score += 1
 else:
@@ -24,7 +25,7 @@ else:
 
 sleep()
 answer = input("What is my COMO nickname? ")
-if answer.lower == "Sevynn":
+if answer.lower() == "sevynn":
     print('Correct')
     score += 2
 else:
@@ -40,11 +41,11 @@ else:
 
 sleep()
 answer = input("Are you single? ")
-if answer.lower == "yes":
-    print('lame b***h')
+if answer.lower() == "yes":
+    print('no need to brag :|')
     score += 1
 else:
-    print('no need to brag :|')
+    print('lame b***h')
 
 sleep()
 answer = input("How many bodies do I have? ")
@@ -53,4 +54,4 @@ if answer == "7":
     score += 3
 else:
     print('Incorrect')
-
+print('your final score is ' + str(score))
